@@ -1,7 +1,7 @@
 FROM amazonlinux:2 as intermediate
 
 # Install php
-RUN amazon-linux-extras install -y php7.3
+RUN amazon-linux-extras install -y php7.4
 
 # Install dependencies and useful tools
 RUN yum -y install \
