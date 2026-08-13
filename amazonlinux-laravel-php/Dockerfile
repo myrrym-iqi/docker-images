@@ -95,10 +95,10 @@ COPY files/msgpack.ini /etc/php.d/
 COPY files/www.conf /etc/php-fpm.d/www.conf
 COPY files/memcached.ini /etc/php.d/50-memcached.ini
 
-# Don't run php as daemon
-RUN sed -i 's/daemonize = yes/daemonize = no/g' /etc/php-fpm.conf
-
 # Disable host key checking for github.com
 ADD files/ssh-config /root/.ssh/config
 
-CMD ["/usr/sbin/php-fpm", "--fpm-config", "/etc/php-fpm.conf"]
+# --nodaemonize forces php-fpm to stay in the foreground regardless of
+# daemonize setting in php-fpm.conf, so the package's shipped config can't
+# change across PHP versions and silently background the process
+CMD ["/usr/sbin/php-fpm", "--fpm-config", "/etc/php-fpm.conf", "--nodaemonize"]
