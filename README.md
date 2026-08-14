@@ -1,6 +1,6 @@
 # docker-images
 
-This repository contains files for building [Docker](https://www.docker.com/) images. All images should be available on [Docker Hub](https://hub.docker.com/) under the [juwaicom](https://hub.docker.com/u/juwaicom/) account.
+This repository contains files for building [Docker](https://www.docker.com/) images. All images should be available on [public.ecr.aws/juwaiiqi](https://gallery.ecr.aws/juwaiiqi/).
 
 Publishing is manual (no CI builds/pushes these images) - check the tag table for each image below before rebuilding and pushing over an existing tag.
 
