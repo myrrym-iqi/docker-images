@@ -9,7 +9,7 @@ Publishing is manual (no CI builds/pushes these images) - check the tag table fo
 | Tag | PHP | Built from |
 | --- | --- | --- |
 | `1.0`, `buildx-latest` | 7.3 | commit `12fbd50` - do **not** rebuild from current master, master is on PHP 7.4 |
-| `php74` (pending publish) | 7.4 | commit `882c66a` onward |
+| `php74` (pending publish) | 7.4 | current master |
 
 `:1.0` is pinned by list.juwai.com, himalayas-cms, website-tiger, redstar, juwai-admin, agent-admin
 and juwai-com-v2. Rebuilding and pushing `:1.0` from current master would move all seven from PHP
